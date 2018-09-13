@@ -22,7 +22,7 @@ void dropperCallback(const std_msgs::Bool &msg);
 void getThrusterPWM(const alpheus_msgs::thruster &msg);
 
 //ros::Subscriber<std_msgs::Bool> emergency_sub("emergency",emergencyCallback);
-ros::Subscriber<alpheus_msgs::vectorThruster>thruster_sub("vectorThruster", getThrusterPWM);
+ros::Subscriber<alpheus_msgs::vectorThruster>thruster_sub("/vectorThruster", getThrusterPWM);
 ros::Subscriber<std_msgs::Bool> torpedo_sub("torpedo",torpedoCallback);
 ros::Subscriber<std_msgs::Bool> dropper_sub("dropper",dropperCallback);
 
